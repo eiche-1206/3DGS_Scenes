@@ -4,20 +4,20 @@ kind: scene
 backend: mujoco
 source:
   type: local
-  ref: /var/limx/imptdata/assets/scenes/mj_3dgs_hall
+  ref: /var/data/imptdata/assets/scenes/mj_3dgs_hall
   at: '2026-09-14T12:22:32'
 files:
 - path: SOURCE.md
   size: 7589
-  sha256: sha256:ccd636dea5779287e6d2428cacc1fed24d25f80f2a7e57f58465610932fb7cba
+  sha256: sha256:35a1522f2657839215429ea4d7439e559311f279dc5ab1f7f8b55b1b389b7499
   role: doc
 - path: meta.yaml
   size: 1307
   sha256: sha256:0857b68b7365e370831787bbd116c8c14eb81fbde4c4cd0bb5427c16897d22e3
   role: meta
 - path: scene.xml
-  size: 16565
-  sha256: sha256:13c1f08e8b093ae3ac8473795f58aacf940743ddacf7b8d406baf64884faccf9
+  size: 16578
+  sha256: sha256:34059c1eb9f903c92e36cf0308f7ba0fb309a50434f37f2ab6d9b77c6a368fab
   role: meta
 - path: assets/CH_atlas.png
   size: 77576225

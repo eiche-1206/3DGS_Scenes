@@ -20,7 +20,7 @@ MuJoCo environment for the 3DGS-derived 5F SDF scene.
 - The scene materializer combines the selected robot with `scene.xml` in its runtime cache.
 - Environment mesh files and `sdfvoxel.grid` NPZ paths are rewritten to absolute paths before
   the environment is copied to the cache.
-- The Tron2 entry reuses the `mj_msp_5f` world frame and verified spawn
+- The robot entry reuses the `mj_msp_5f` world frame and verified spawn
   `(16.975, -14.115, 0.95, yaw=0.0)`.
 - Reuses the existing `mj_msp_5f` occupancy map as `../../maps/mj_3dgs_5f.{pgm,yaml}`.
 - The visual OBJ is declared as `assets/5F_3dgs_visual.obj` in the source scene and made

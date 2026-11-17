@@ -1,6 +1,6 @@
 # mj_3dgs_penthouse — XGrids LCC2 → MuJoCo, source & regeneration
 
-Source: `/home/limx/data/3DGS/scenes/LCC_studio/PentHouse` (`meta.lcc2`, quality tier,
+Source: `/home/user/data/3DGS/scenes/LCC_studio/PentHouse` (`meta.lcc2`, quality tier,
 10,675,771 gaussians / 181 MB, 23 `.sog` chunks + `env.sog`).
 
 Layering: **3DGS renders the robot cameras; a mesh/SDF pair does collision and the
@@ -59,9 +59,9 @@ Five changes, each with the measurement that justified it. Collision is untouche
 Reproduce:
 
 ```bash
-D=/home/limx/data/3DGS/pipelines/D_lcc2sim
+D=/home/user/data/3DGS/pipelines/D_lcc2sim
 # 1  geometry + KD colour  (docker gggs:ext, ~12 min)
-docker run --rm --gpus all -v /home/limx/data/3DGS:/work -w /work/GGGS gggs:ext \
+docker run --rm --gpus all -v /home/user/data/3DGS:/work -w /work/GGGS gggs:ext \
   python3 tools/bake_texture_tiled.py -i <PC>/gggs/penthouse/recon_post.ply \
   -o <PC>/gggs/penthouse/pA_1p5M.obj --tex 8192 --target_faces 1500000 --grid 3 \
   --weld 0.02 --cache <PC>/gggs/penthouse/gauss_nurec.npz
@@ -558,9 +558,9 @@ Shipped as `scene_v12.xml` → deployed. Assets: `assets/vis_chunks6/` (8 chunks
 
 | stage | interpreter |
 |---|---|
-| `.lcc2` → PLY | `node /home/limx/SuperSplat/node_modules/@playcanvas/splat-transform/bin/cli.mjs` (v3.1.7) |
-| everything numeric | `/home/limx/data/3DGS/.venv_gs/bin/python -s` (gsplat 1.5.3 prebuilt, scipy, skimage, trimesh, fast_simplification, coacd) |
-| mujoco + gsplat together | `/home/limx/miniconda3/envs/discoverse/bin/python -s` |
+| `.lcc2` → PLY | `node /home/user/SuperSplat/node_modules/@playcanvas/splat-transform/bin/cli.mjs` (v3.1.7) |
+| everything numeric | `/home/user/data/3DGS/.venv_gs/bin/python -s` (gsplat 1.5.3 prebuilt, scipy, skimage, trimesh, fast_simplification, coacd) |
+| mujoco + gsplat together | `/home/user/miniconda3/envs/discoverse/bin/python -s` |
 | MuJoCo 3.2.3 + `libsdfvoxel.so` | docker `guide-runtime:1.6.0.20260805004358` |
 
 `-s` is mandatory: `~/.local/lib/python3.10/site-packages` leaks into the conda envs
@@ -574,9 +574,9 @@ already built against 3.2.3 — **no plugin rebuild needed** (unlike the 5F chap
 ## Commands
 
 ```bash
-CLI="node /home/limx/SuperSplat/node_modules/@playcanvas/splat-transform/bin/cli.mjs"
-V=/home/limx/data/3DGS/.venv_gs/bin/python
-cd /home/limx/data/3DGS/scenes/LCC_studio/PentHouse
+CLI="node /home/user/SuperSplat/node_modules/@playcanvas/splat-transform/bin/cli.mjs"
+V=/home/user/data/3DGS/.venv_gs/bin/python
+cd /home/user/data/3DGS/scenes/LCC_studio/PentHouse
 
 # 0. lcc2 -> PLY. -r 90,0,0 undoes the reader's LCC2_TRANSFORM; env.sog joins as a
 #    second input because it is already native Z-up (see the Rz180 trap below).
@@ -600,9 +600,9 @@ $V -s src/decompose_coacd.py         # 22 s  -> assets/coacd/part_*.obj (A/B onl
 python3 -s src/compose_scene.py --mode sdf --out scene.xml
 
 # validation
-docker run --rm --gpus all -v /home/limx:/home/limx -w $PWD \
+docker run --rm --gpus all -v /home/user:/home/user -w $PWD \
   guide-runtime:1.6.0.20260805004358 bash -lc 'python3 src/drop_test.py --xml scene.xml --tag SDF'
-MUJOCO_GL=egl /home/limx/miniconda3/envs/discoverse/bin/python -s src/gs_check.py
+MUJOCO_GL=egl /home/user/miniconda3/envs/discoverse/bin/python -s src/gs_check.py
 ```
 
 Whole chain ≈ **5 minutes** of compute, excluding the one-off 19-minute dead end.

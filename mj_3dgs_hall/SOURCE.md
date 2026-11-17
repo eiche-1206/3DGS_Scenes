@@ -1,8 +1,8 @@
 # mj_3dgs_hall — XGrids LCC2 ConferenceHall，从零重做
 
-扫描源 `/home/limx/data/3DGS/scenes/LCC_studio/ConferenceHall/meta.lcc2`
+扫描源 `/home/user/data/3DGS/scenes/LCC_studio/ConferenceHall/meta.lcc2`
 （XGrids，`version 0.0.3`，LOD0 6,174,150 个高斯，**SH degree 0**）。
-工作树 `/home/limx/data/3DGS/scenes/CH/`，工具 `3dgs2sim` 仓库（镜像同名）。
+工作树 `/home/user/data/3DGS/scenes/CH/`，工具 `3dgs2sim` 仓库（镜像同名）。
 构建于 2026-08-20/21。**尚未部署。**
 
 > ⚠️ 这个 id 上曾有过另一个场景，走的是 LiDAR 网格 + 高斯填充、2 cm 体素的路线，
