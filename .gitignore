@@ -1,0 +1,2 @@
+# 高斯点云 .ply 走 Git LFS（见 .gitattributes），不入普通 git 对象库。
+.scene_abs.xml
