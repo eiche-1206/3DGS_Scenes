@@ -17,7 +17,6 @@ Each scene has three aligned layers:
 | Scene | Space | Size | Collision | Assets (without `.ply`) | Gaussians `.ply` |
 |---|---|---|---|---|---|
 | `mj_3dgs_5f` | Office floor: corridors, open-plan desks, meeting rooms | ~76 × 42 m | 60 SDF tiles | 333 MB | 1.9 GB |
-| `mj_3dgs_15f` | Office floor 15F: reception, open-plan desks, pantry | ~40 × 74 m | 60 SDF tiles | 330 MB | 1.3 GB |
 | `mj_3dgs_hall` | Conference hall: L-shaped corridor + banquet hall, 728 m² indoor | ~47 × 42 m | 36 SDF tiles | 313 MB | 0.35 GB |
 | `mj_3dgs_penthouse` | Penthouse apartment: living area, double-height room, glazed facade | ~24 × 33 m indoor | 15 SDF tiles | 402 MB | 1.4 GB |
 
