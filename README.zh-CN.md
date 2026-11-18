@@ -1,8 +1,15 @@
-# 3DGS_Scenes_Private
+# 3DGS_Scenes
 
 [English](README.md) | **中文**
 
 用 3D 高斯泼溅（3DGS）扫描的真实室内空间，转换成可以直接加载的 **MuJoCo** 仿真场景，用于足式机器人的导航与感知仿真。
+
+### 3DGS场景
+
+<p align="center">
+  <a href="docs/media/office5f_navigation_demo.mp4"><img src="docs/media/office5f_navigation_demo.gif" width="100%"></a>
+</p>
+<p align="center"><sub><b>办公室楼层</b>：导航演示（6 倍速，点击查看完整 90 秒视频）</sub></p>
 
 每个场景包含三层，彼此对齐：
 
@@ -29,6 +36,13 @@
   <img src="docs/media/hall_banquet_room.jpg" width="49%">
 </p>
 
+### 顶层公寓
+
+<p align="center">
+  <a href="docs/media/penthouse_humanoid_demo.mp4"><img src="docs/media/penthouse_humanoid_demo.gif" width="100%"></a>
+</p>
+<p align="center"><sub><b>顶层公寓</b>：人形机器人演示（点击查看视频）</sub></p>
+
 ## 做了哪些处理
 
 - **去除地面漂移。** 扫描的地面整体会弯曲，最多约 0.27 m。实测出漂移场后，对网格、SDF 和 `.ply` 一起校正，三层保持对齐（相机层与碰撞层约差 13 mm）。
@@ -43,8 +57,8 @@
 环境：Python 3、MuJoCo 3.2.3，以及 `sdfvoxel` SDF 插件（`libsdfvoxel.so`，本仓库不包含）。
 
 ```bash
-git clone https://github.com/eiche-1206/3DGS_Scenes_Private.git
-cd 3DGS_Scenes_Private
+git clone https://github.com/eiche-1206/3DGS_Scenes.git
+cd 3DGS_Scenes
 pip install mujoco==3.2.3
 
 # 在 MuJoCo viewer 中打开场景

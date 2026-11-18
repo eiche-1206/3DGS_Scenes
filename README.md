@@ -1,8 +1,15 @@
-# 3DGS_Scenes_Private
+# 3DGS_Scenes
 
 **English** | [中文](README.zh-CN.md)
 
 Real indoor spaces captured with 3D Gaussian Splatting (3DGS) and turned into ready-to-load **MuJoCo** simulation scenes for legged-robot navigation and perception.
+
+### 3DGS scenes
+
+<p align="center">
+  <a href="docs/media/office5f_navigation_demo.mp4"><img src="docs/media/office5f_navigation_demo.gif" width="100%"></a>
+</p>
+<p align="center"><sub><b>Office floor</b>: navigation demo (6× speed, click for the full 90 s video)</sub></p>
 
 Each scene has three aligned layers:
 
@@ -29,6 +36,13 @@ Each scene has three aligned layers:
   <img src="docs/media/hall_banquet_room.jpg" width="49%">
 </p>
 
+### Penthouse
+
+<p align="center">
+  <a href="docs/media/penthouse_humanoid_demo.mp4"><img src="docs/media/penthouse_humanoid_demo.gif" width="100%"></a>
+</p>
+<p align="center"><sub><b>Penthouse</b>: humanoid demo (click for the video)</sub></p>
+
 ## What went into the scenes
 
 - **Floor drift removal.** Scans bend by up to ~0.27 m over a floor. A measured drift field is removed from the mesh, the SDF and the `.ply` together, so all three layers stay aligned (camera vs. collision: ~13 mm).
@@ -43,8 +57,8 @@ Each scene has three aligned layers:
 Requirements: Python 3, MuJoCo 3.2.3, and the `sdfvoxel` SDF plugin (`libsdfvoxel.so`, not included in this repo).
 
 ```bash
-git clone https://github.com/eiche-1206/3DGS_Scenes_Private.git
-cd 3DGS_Scenes_Private
+git clone https://github.com/eiche-1206/3DGS_Scenes.git
+cd 3DGS_Scenes
 pip install mujoco==3.2.3
 
 # Open a scene in the MuJoCo viewer
