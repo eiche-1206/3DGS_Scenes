@@ -9,7 +9,7 @@ Real indoor spaces captured with 3D Gaussian Splatting (3DGS) and turned into re
 <p align="center">
   <a href="docs/media/office5f_navigation_demo.mp4"><img src="docs/media/office5f_navigation_demo.gif" width="100%"></a>
 </p>
-<p align="center"><sub><b>Office floor</b>: navigation demo (6× speed, click for the full 90 s video)</sub></p>
+<p align="center"><sub><b>Office floor</b>: navigation demo (2× speed, click for the full 90 s video)</sub></p>
 
 Each scene has three aligned layers:
 

@@ -9,7 +9,7 @@
 <p align="center">
   <a href="docs/media/office5f_navigation_demo.mp4"><img src="docs/media/office5f_navigation_demo.gif" width="100%"></a>
 </p>
-<p align="center"><sub><b>办公室楼层</b>：导航演示（6 倍速，点击查看完整 90 秒视频）</sub></p>
+<p align="center"><sub><b>办公室楼层</b>：导航演示（2 倍速，点击查看完整 90 秒视频）</sub></p>
 
 每个场景包含三层，彼此对齐：
 
